@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - SecureStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="sticky-top bg-body shadow-sm">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand fs-3 d-flex align-items-center gap-2" href="index.html">
+                    <i class="bi bi-box-seam-fill text-primary"></i>
+                    <span>Secure<span class="text-primary">Store</span></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                    <div class="offcanvas-header bg-light">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                        </ul>
+                        <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                            <div class="theme-toggle-btn text-body-secondary me-2" id="theme-toggle"><i
+                                    class="bi bi-moon-stars-fill" id="theme-icon"></i></div>
+                            <a href="login.html" class="btn btn-outline-primary px-4 rounded-pill">Login</a>
+                            <a href="register.html" class="btn btn-primary px-4 rounded-pill">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h1 class="fw-bold display-5">Storage Solutions</h1>
+            <p class="lead text-secondary">Find the perfect space for every need.</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <!-- Personal Storage -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-lg-5 bg-primary d-flex align-items-center justify-content-center p-4">
+                                <i class="bi bi-person-workspace fs-1 text-white"></i>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card-body p-4">
+                                    <h4 class="card-title fw-bold">Personal Storage</h4>
+                                    <p class="card-text text-secondary">Declutter your home or store items during a
+                                        move. Various sizes from lockers to large rooms.</p>
+                                    <a href="service-details.html"
+                                        class="btn btn-outline-primary rounded-pill btn-sm stretched-link">Learn
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Storage -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-lg-5 bg-warning d-flex align-items-center justify-content-center p-4">
+                                <i class="bi bi-briefcase fs-1 text-dark"></i>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card-body p-4">
+                                    <h4 class="card-title fw-bold">Business Storage</h4>
+                                    <p class="card-text text-secondary">Archive documents, store inventory, or
+                                        equipment. Drive-up access helps streamline logistics.</p>
+                                    <a href="service-details.html"
+                                        class="btn btn-outline-dark rounded-pill btn-sm stretched-link">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Storage -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-lg-5 bg-dark d-flex align-items-center justify-content-center p-4">
+                                <i class="bi bi-car-front fs-1 text-white"></i>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card-body p-4">
+                                    <h4 class="card-title fw-bold">Vehicle Storage</h4>
+                                    <p class="card-text text-secondary">Secure parking for cars, RVs, boats, and
+                                        motorcycles. Covered and uncovered options available.</p>
+                                    <a href="service-details.html"
+                                        class="btn btn-outline-dark rounded-pill btn-sm stretched-link">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Storage -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div class="row g-0 h-100">
+                            <div class="col-lg-5 bg-info d-flex align-items-center justify-content-center p-4">
+                                <i class="bi bi-backpack fs-1 text-white"></i>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card-body p-4">
+                                    <h4 class="card-title fw-bold">Student Storage</h4>
+                                    <p class="card-text text-secondary">Affordable summer storage for college students.
+                                        Small lockers and 5x5 units perfect for dorm stuff.</p>
+                                    <a href="service-details.html"
+                                        class="btn btn-outline-primary rounded-pill btn-sm stretched-link">Learn
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities List -->
+    <section class="py-5 bg-primary-subtle">
+        <div class="container py-4">
+            <h3 class="text-center fw-bold mb-5">Facility Amenities</h3>
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="p-3 bg-white rounded shadow-sm h-100">
+                        <i class="bi bi-snow2 fs-2 text-primary mb-2 d-block"></i>
+                        <span class="fw-medium">Climate Controlled</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3 bg-white rounded shadow-sm h-100">
+                        <i class="bi bi-wifi fs-2 text-primary mb-2 d-block"></i>
+                        <span class="fw-medium">Free WiFi</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3 bg-white rounded shadow-sm h-100">
+                        <i class="bi bi-box-seam fs-2 text-primary mb-2 d-block"></i>
+                        <span class="fw-medium">Moving Supplies</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3 bg-white rounded shadow-sm h-100">
+                        <i class="bi bi-truck fs-2 text-primary mb-2 d-block"></i>
+                        <span class="fw-medium">Free Move-in Truck</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <a class="footer-brand mb-3" href="index.html">
+                        <i class="bi bi-box-seam-fill text-primary"></i>
+                        <span>Secure<span class="text-primary">Store</span></span>
+                    </a>
+                    <p class="text-muted">Modern, secure, and affordable storage solutions for everything you value.
+                        Proudly serving the community since 2010.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-5"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-3 text-white">Company</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-3 text-white">Support</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Size Calculator</a></li>
+                        <li><a href="login.html">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3 text-white">Newsletter</h5>
+                    <p class="text-muted small">Subscribe for storage tips and exclusive offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address">
+                        <button class="btn btn-primary" type="button"><i class="bi bi-send-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start text-muted small">
+                    &copy; 2026 SecureStore. All rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end text-muted small">
+                    <a href="#" class="text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Back to Top" aria-label="Back to Top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+</body>
+
+</html>
