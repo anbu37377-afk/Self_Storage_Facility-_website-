@@ -58,13 +58,14 @@ body {
    THEME-AWARE SECTION BACKGROUNDS
    ============================================ */
 
-/* Override Bootstrap's bg-light and bg-dark to be theme-aware */
+/* Override Bootstrap's bg-light and bg-dark to be theme-aware, 
+   but only for non-hero sections to preserve fixed dark-hero designs */
 .bg-light {
     background-color: var(--light-bg) !important;
     color: var(--body-text) !important;
 }
 
-.bg-dark {
+.bg-dark:not(.hero) {
     background-color: var(--header-footer-bg) !important;
     color: var(--header-footer-text) !important;
 }
@@ -74,9 +75,9 @@ body {
     color: var(--body-text) !important;
 }
 
-/* Hero section specific fixes */
-.hero {
-    background-color: var(--hero-bg) !important;
+/* Hero section background */
+.hero:not(.bg-dark):not(.bg-primary) {
+    background-color: var(--hero-bg);
 }
 
 .hero h1,
@@ -178,35 +179,56 @@ h6,
     color: #adb5bd !important;
 }
 
-/* Ensure hero section text is always visible */
-.hero * {
-    color: inherit;
+/* Ensure hero section text visibility */
+.hero {
+    position: relative;
 }
 
-.hero h1,
-.hero h2,
-.hero h3,
-.hero h4,
-.hero h5,
-.hero h6,
-.hero .display-1,
-.hero .display-2,
-.hero .display-3,
-.hero .display-4,
-.hero .display-5,
-.hero .display-6 {
-    color: var(--heading-color) !important;
+/* Ensure hero section text matches container intent */
+.hero.text-white h1,
+.hero.text-white h2,
+.hero.text-white h3,
+.hero.text-white h4,
+.hero.text-white h5,
+.hero.text-white h6,
+.hero.text-white .display-1,
+.hero.text-white .display-2,
+.hero.text-white .display-3,
+.hero.text-white .display-4,
+.hero.text-white .display-5,
+.hero.text-white .display-6 {
+    color: #ffffff !important;
 }
 
-.hero .lead,
-.hero p.lead {
-    color: var(--text-muted) !important;
+/* Fix contrast for lead text in white-text/dark sections */
+.text-white .lead,
+.text-white p.lead,
+.hero.text-white .lead,
+.hero.text-white p.lead,
+.hero.bg-dark .lead,
+.hero.bg-dark p.lead {
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+
+/* Ensure buttons in dark hero sections have proper contrast */
+.hero.text-white .btn-outline-light,
+.hero.bg-dark .btn-outline-light {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.hero.text-white .btn-outline-light:hover,
+.hero.bg-dark .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #0d6efd !important;
 }
 
 [data-bs-theme="dark"] .hero .lead,
 [data-bs-theme="dark"] .hero p.lead {
     color: #ced4da !important;
 }
+
 
 /* Hero badge visibility */
 .hero .badge {
@@ -592,33 +614,58 @@ body.bg-light .card h6 {
     transform: translateY(-5px);
 }
 
+/* Brand Logo & Name (Unified) */
+.navbar-brand,
+.footer-brand,
+.brand-logo {
+    font-weight: 800 !important;
+    font-size: 1.75rem !important;
+    /* Consistent fs-3 size */
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    text-decoration: none !important;
+    color: var(--heading-color) !important;
+}
+
+.navbar-brand i,
+.footer-brand i,
+.brand-logo i {
+    color: var(--primary-color) !important;
+    font-size: 1.75rem !important;
+}
+
+.navbar-brand span,
+.footer-brand span,
+.brand-logo span {
+    color: inherit !important;
+}
+
+.navbar-brand span .text-primary,
+.footer-brand span .text-primary,
+.brand-logo span .text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Ensure 'Secure' part is readable in all themes */
+[data-bs-theme="light"] .navbar-brand,
+[data-bs-theme="light"] .footer-brand,
+[data-bs-theme="light"] .brand-logo {
+    color: #212529 !important;
+}
+
+[data-bs-theme="dark"] .navbar-brand,
+[data-bs-theme="dark"] .footer-brand,
+[data-bs-theme="dark"] .brand-logo {
+    color: #ffffff !important;
+}
+
+
 /* Unit Cards */
 .unit-card .price-tag {
     color: var(--primary-color);
     font-weight: 800;
     font-size: 1.5rem;
-}
-
-/* Brand Specifics (Consistent across Header/Footer) */
-.navbar-brand>span,
-.footer-brand>span {
-    color: var(--heading-color) !important;
-}
-
-.navbar-brand>span>.text-primary,
-.footer-brand>span>.text-primary {
-    color: var(--primary-color) !important;
-}
-
-/* Ensure 'Secure' part is readable in all themes */
-[data-bs-theme="light"] .navbar-brand>span,
-[data-bs-theme="light"] .footer-brand>span {
-    color: #212529 !important;
-}
-
-[data-bs-theme="dark"] .navbar-brand>span,
-[data-bs-theme="dark"] .footer-brand>span {
-    color: #ffffff !important;
 }
 
 /* Sticky Theme Toggle */
@@ -992,4 +1039,80 @@ section,
 .offcanvas {
     z-index: 1050;
     /* Ensure on top of sticky header if needed */
+}
+
+/* Contact Page Social Buttons */
+.theme-aware-social {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-color);
+}
+
+.theme-aware-social:hover {
+    background-color: var(--primary-color);
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
+}
+
+[data-bs-theme="dark"] .theme-aware-social {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .theme-aware-social:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* ============================================
+   PRICING CARD CENTER ALIGNMENT (WEB VIEW)
+   ============================================ */
+
+@media (min-width: 992px) {
+    .pricing-section .pricing-card {
+        text-align: center;
+    }
+
+    .pricing-section .pricing-card .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Stack header elements (Size and Price) vertically in center */
+    .pricing-section .pricing-card .card-body .d-flex.justify-content-between {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .pricing-section .pricing-card .text-end {
+        text-align: center !important;
+    }
+
+    /* Center features list */
+    .pricing-section .pricing-card ul.list-unstyled {
+        text-align: left;
+        /* Keep text left aligned but the container centered */
+        display: inline-block;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .pricing-section .pricing-card ul.list-unstyled li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /* Force the row to center items if Bootstrap class is ignored */
+    .pricing-section .row.justify-content-center {
+        justify-content: center !important;
+    }
 }

@@ -297,6 +297,16 @@
             sidebarToggle.addEventListener('click', () => {
                 sidebar.classList.toggle('show');
             });
+
+            // Close sidebar when a menu item is clicked (on mobile/tablet)
+            const sidebarLinks = sidebar.querySelectorAll('.nav-link');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992) {
+                        sidebar.classList.remove('show');
+                    }
+                });
+            });
         }
 
         // Import Theme Toggle Logic (or reuse main.js if accessible)
