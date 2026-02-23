@@ -1116,3 +1116,77 @@ section,
         justify-content: center !important;
     }
 }
+
+/* ============================================
+   NAVBAR 1024PX ALIGNMENT FIX
+   ============================================ */
+
+/* Specifically target the tablet/small laptop range (1024px) 
+   where the navbar is expanded but space is tight */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-brand {
+        font-size: 1.35rem !important;
+    }
+
+    .navbar-brand i {
+        font-size: 1.35rem !important;
+    }
+
+    .navbar-nav .nav-link {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    /* Reduce gap between nav items if necessary */
+    .navbar-nav {
+        gap: 0 !important;
+    }
+
+    /* Reduce spacing in the action buttons container */
+    .navbar .offcanvas-body .d-flex.gap-3 {
+        gap: 0.5rem !important;
+    }
+
+    /* Shrink the buttons slightly to fit better */
+    .navbar .btn.px-4 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    .theme-toggle-btn {
+        margin-right: 0.25rem !important;
+    }
+}
+
+/* ============================================
+   MOBILE HERO SECTION FIX (360px)
+   ============================================ */
+
+@media (max-width: 575.98px) {
+    .hero .display-3 {
+        font-size: 1.85rem !important;
+        line-height: 1.25;
+    }
+
+    .hero .lead {
+        font-size: 0.95rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Keep buttons side-by-side but make them smaller to fit 360px */
+    .hero .d-flex.gap-3 {
+        gap: 0.5rem !important;
+        justify-content: center !important;
+    }
+
+    .hero .btn-lg {
+        padding: 0.6rem 0.85rem !important;
+        font-size: 0.8rem !important;
+        width: auto !important;
+        min-width: 0 !important;
+        white-space: nowrap !important;
+        letter-spacing: -0.2px;
+    }
+}
